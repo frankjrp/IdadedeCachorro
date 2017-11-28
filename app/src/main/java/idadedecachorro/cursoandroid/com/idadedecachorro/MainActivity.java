@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 if (textoDigitado.isEmpty()) {
                     verIdade.setText("");
 
-                    avisoIdade(); //mostra a mensagem criada no método criado abaixo
+                    Toast.makeText(MainActivity.this, "Digite a idade do cachorro.", Toast.LENGTH_LONG).show();
                 } else {
 
                     int valorDigitado = Integer.parseInt(textoDigitado);
